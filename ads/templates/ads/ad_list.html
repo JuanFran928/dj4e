@@ -1,0 +1,129 @@
+{% extends "base_menu.html" %}
+{% block content %}
+<style> 
+.ebena-home .card-deck img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  padding: 0;
+}
+div.row {
+    display: block;
+    width: 100%;
+}
+div.row div.col {
+    width: 100%;
+    max-width: 100%;
+}
+
+</style>
+<!--ELIMINAR ESTILOS CSS QUE NO SE UTILICEN-->
+<br><br>
+<div class="container" style="float:center">
+  <!-- https://www.w3schools.com/howto/howto_css_search_button.asp -->
+  <form>
+    <input type="text" placeholder="Search.." name="search"
+    {% if search %} value="{{ search }}" {% endif %}
+    >
+    <button type="submit"><i class="fa fa-search"></i></button>
+  <a href="{% url 'ads:all' %}"><i class="fa fa-undo"></i></a>
+  </form>
+  </div>
+
+  <br><br>
+
+  {% if ad_list %}
+  <div class="container ebena-home">
+    <div class="row" >
+      <div class="card-deck" >
+      {% for ad in ad_list %}
+
+      <div class="col-lg-4 col-md-6 col-sm-12" > <!--col-sm-4-->
+        <div class="card " style="margin-top: 10px">
+
+          <img  class="img-top" src="{{ad.picture.url}}">
+
+            <div class="card-body">
+                <h5 class="card-title">
+                  <a href="{% url 'ads:ad_detail'  ad.id %}">{{ ad.title }} </a>
+                </h5>
+                <p class="card-text">            <div style="left:10px">
+                  {% if ad.text|length < 100 %}
+                      {{ ad.text }}
+                  {% else %}
+                      {{ ad.text|slice:"0:99" }}
+                      <a href="{% url 'ads:ad_detail'  ad.id %}">...</a>
+                  {% endif %}
+              </div></p>
+                <p class="card-text"><small class="text-muted">           
+                  {% if ad.owner.username and ad.owner != user %}
+                  posted by {{ ad.owner.username }},
+                  {% elif ad.owner.username and ad.owner == user %}
+                  posted by you,
+                  {% endif %}
+                  {{ ad.natural_updated }}
+                </small></p>    
+            </div>
+
+            {% if ad.owner == user and request.path == '/my_ads/' %}
+            <div class = "text-right">
+              <a href="{% url 'ads:ad_update' ad.id %}" class="btn btn-outline-success">Edit</a> 
+              <a href="{% url 'ads:ad_delete' ad.id %}" class="btn btn-outline-success">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+    </div>
+  {% else %}
+    <p>There are no ads in the database.</p>
+  {% endif %}
+
+
+<!--METER PAGINACION EN UNA PLANTILLA DIFERENTE-->
+<!--la paginacion que no vaya saltando cuando pulsas, mejorar eso, front end 
+-->
+<div class="container text-center" style="margin-top:20px">
+{% if is_paginated %}
+  {% if page_obj.has_previous %}
+    <a class= "btn btn-outline-info mb-4" href ="?page=1">First</a>
+    <a class= "btn btn-outline-info mb-4" href ="?page={{ page_obj.previous_page_number }}">Previous</a>
+  {% endif %}
+
+  {% for num in page_obj.paginator.page_range %}
+    {% if page_obj.number == num %}
+      <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+      <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if page_obj.has_next %}
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+  {% endif %}
+{% endif %}
+</div>
+
+<script>
+  function favPost(url, ad_id) {
+      console.log('Requesting JSON');
+      $.post(url, {},  function(rowz){
+          console.log(url, 'finished');
+          $("#unfavorite_star_"+ad_id).toggle();
+          $("#favorite_star_"+ad_id).toggle();
+      }).fail(function(xhr) {
+          alert('Url failed with '+xhr.status+' '+url);
+      });
+  }
+  </script>
+{% endblock %}
+
+
+<!--PAGINACION HACER-->
+
+<!--https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html-->
+
+<!--añadir margen abajo del todo-->

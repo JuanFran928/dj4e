@@ -1,0 +1,75 @@
+  <!-- https://stackoverflow.com/questions/22047251/django-dynamically-get-view-url-and-check-if-its-the-current-page -->
+<!--añadir barra responsive  https://www.youtube.com/watch?v=UlBu9g42IG4-->
+{% extends "base_bootstrap.html" %}
+{% block navbar %}
+{% load app_tags %}
+<style>
+    nav div a{
+        color: white;
+    }
+
+
+    li a:hover{
+        color:white;
+    }
+
+
+
+    #logout{
+        color: black;
+    }
+
+    .navbar-nav > li{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+ .dropdown-menu  {
+    min-width: 4rem;
+}
+
+nav {
+    background-color:green;
+}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark  fixed-top" > <!--fixed top-->
+    <div class="navbar-header" >
+        <a class="navbar-brand" href="/" >Ads</a>
+    </div>
+    <div class="d-flex order-lg-1 ml-auto pr-2">
+        <ul class="navbar-nav flex-row">
+            <ul class="nav navbar-nav navbar-right d-flex flex-row">
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'ads:my_ads' %}" >My Ads</a>
+                </li>
+                <li>
+                <a href="{% url 'ads:ad_create' %}">Create Ad</a>
+                </li>
+                <li class="dropdown ">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        <img style="width: 25px;" src="{{ user|gravatar:60 }}"/><b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'logout' %}?next={% url 'ads:all' %}" id="logout">Logout</a></li>
+                    </ul>
+                </li>
+                {% else %}
+                <li>
+                    <a href="#">Sign Up</a>
+                </li>
+                <li>
+                <a href="{% url 'login' %}?next={% url 'ads:all' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </ul>
+    </div>
+</nav>
+
+  {% endblock %}
+
+
+
+
