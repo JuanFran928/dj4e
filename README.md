@@ -10,4 +10,4 @@ In order to run the project in the browser:
 6) python manage.py makemigrations
 7) python manage.py migrate
 8) python manage.py runserver 8080
-9) copy and paste in a browser: http://127.0.0.1:8080/
+9) copy and paste in the browser: http://127.0.0.1:8080/
