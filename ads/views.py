@@ -17,13 +17,6 @@ from django.core.paginator import Paginator
 from django.views.generic import ListView
 
 
-
-#METERLE REGISTRO DE USUARIOS
-#https://github.com/CoreyMSchafer/code_snippets/tree/master/Django_Blog
-
-
-
-
 class AdListView(OwnerListView):
     model = Ad
     template_name = "ads/ad_list.html"
@@ -32,7 +25,6 @@ class AdListView(OwnerListView):
 
     context_object_name = "ad_list"
 
-    # #paginacion va funcionando con esto
     def get_queryset(self):
         current_url = resolve(self.request.path_info).url_name 
         
