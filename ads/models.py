@@ -2,12 +2,6 @@ from django.db import models
 from stdimage import StdImageField, JPEGField
 
 
-#BUSCAR COMO CREAR UN LOGIN Y AÑADIR USUARIOS DESDE FUERA, editar usuarios
-#NO DEJAR CREAR USUARIOS CON EL MISMO NOMBRE EN MINUSCULA, YA QUE ES CASE SENSITIVE
-#meterle lo de compartir en redes sociales y en whatsapp
-#deploy en heroku
-
-
 # Create your models here.
 from django.db import models
 from django.core.validators import MinLengthValidator
