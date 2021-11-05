@@ -1,4 +1,4 @@
-Ads project, inspired by dj4e.com course from Charles Severance.
+Ads project developed in Django, inspired by dj4e.com course from Charles Severance.
 This project is still under construction.
 
 In order to run the project in the browser:
