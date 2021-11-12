@@ -16,11 +16,8 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),  # Add
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # Keep
     path('', include('ads.urls')),                   # Add,
-    path('autos/', include('autos.urls')),                   # Add,
-    path('cats/', include('cats.urls')),                   # Add,
-    path('hello/', include('hello.urls')),                   # Add,
     path('home/', include('home.urls')),                   # Add,
-    path('polls/', include('polls.urls')),                   # Add,
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
 

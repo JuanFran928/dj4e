@@ -47,10 +47,6 @@ INSTALLED_APPS = [
     'social_django',  
     'home.apps.HomeConfig',
     'ads.apps.AdsConfig',
-    'autos',
-    'cats',
-    'polls',
-    'stdimage',
     
 
 ]
