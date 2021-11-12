@@ -2,3 +2,8 @@ autos/
 cats/
 hello/
 polls/
+ads/migrations
+home/__pycache__
+home/migrations
+mysite/__pycache__
+mysite/migrations
