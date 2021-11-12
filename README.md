@@ -3,6 +3,7 @@ This project is still under construction.
 
 In order to run the project in the browser:
 
+0) Be sure that you have python installed.
 1) Create the directory in your computer where you want to clone this repository.
 2) Open VS Code, go to terminal
 3) cd path_to_directory_you_created_in_point_1
