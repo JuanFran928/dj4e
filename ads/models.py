@@ -1,5 +1,4 @@
 from django.db import models
-from stdimage import StdImageField, JPEGField
 
 
 # Create your models here.

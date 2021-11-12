@@ -1,11 +1,10 @@
-from ads.models import Ad, Comment, Fav
+from ads.models import Ad, Comment
 from ads.forms import CommentForm, CreateForm
-from ads.owner import OwnerListView, OwnerDetailView, OwnerCreateView, OwnerUpdateView, OwnerDeleteView
+from ads.owner import OwnerListView, OwnerDetailView, OwnerDeleteView
 from ads.utils import dump_queries
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from django.db.models import Q
-from django.db.utils import IntegrityError
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
@@ -13,8 +12,6 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import resolve
-from django.core.paginator import Paginator
-from django.views.generic import ListView
 
 
 class AdListView(OwnerListView):

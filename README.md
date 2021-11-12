@@ -1,7 +1,7 @@
 Ads project developed in Django, inspired by dj4e.com course from Charles Severance.
 This project is still under construction.
 
-In order to run the project in the browser:
+In order to run the project in your browser:
 
 0) Be sure that you have python installed.
 1) Create the directory in your computer where you want to clone this repository.

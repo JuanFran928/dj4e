@@ -2,9 +2,6 @@ from django.urls import path, reverse_lazy
 from . import views
 from django.urls import path, reverse_lazy
 from . import views
-from . import models
-from ads.owner import OwnerListView, OwnerDetailView, OwnerCreateView, OwnerUpdateView, OwnerDeleteView
-from django.conf import settings
 from django.conf.urls.static import static
 
 app_name='ads'
