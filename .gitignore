@@ -2,9 +2,9 @@ autos/
 cats/
 hello/
 polls/
-ads/migrations
-ads/__pycache_
-home/__pycache__
-home/migrations
-mysite/__pycache__
-mysite/migrations
+ads/migrations/
+ads/__pycache__/
+home/__pycache__/
+home/migrations/
+mysite/__pycache__/
+mysite/migrations/
