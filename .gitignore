@@ -3,6 +3,7 @@ cats/
 hello/
 polls/
 ads/migrations
+ads/__pycache_
 home/__pycache__
 home/migrations
 mysite/__pycache__
