@@ -3,10 +3,10 @@ This project is still under construction.
 
 In order to run the project in your browser:
 
-0) Be sure that you have python installed.
-1) Create the directory in your computer where you want to clone this repository.
-2) Open VS Code, go to terminal
-3) cd path_to_directory_you_created_in_point_1
+0) Asure you have python installed.
+1) Open VS Code, go to terminal.
+2) ```mkdir directory_where_you_want_to_clone_this_repository```.
+3) ```cd path_to_directory_you_created_before```.
 4) ```git clone https://github.com/JuanFran928/dj4e```
 5) ```pip install -r requirements.txt``` 
 6) cd path_to_manage.py_file 
