@@ -4,7 +4,7 @@ This project is still under construction.
 In order to run the project in your browser:
 
 1) Asure you have python installed.
-2) Open VS Code, go to terminal.
+2) Open VS Code, go to terminal and execute the following commands...
 3) ```mkdir directory_where_you_want_to_clone_this_repository```.
 4) ```cd path_to_directory_you_created_before```.
 5) ```git clone git@github.com:JuanFran928/dj4e.git```
