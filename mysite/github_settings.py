@@ -26,7 +26,7 @@
 
 # Then copy the client_key and secret to this file
 
-SOCIAL_AUTH_GITHUB_KEY = '2bb72ddde2ce3897bee9'
-SOCIAL_AUTH_GITHUB_SECRET = '860e74f89320a7803a56c45a1684d0f8d93015c7'
+SOCIAL_AUTH_GITHUB_KEY = '_____' #Ask key
+SOCIAL_AUTH_GITHUB_SECRET = '____' #Ask key
 
 # For detail: https://readthedocs.org/projects/python-social-auth/downloads/pdf/latest/
