@@ -7,13 +7,14 @@ from .forms import UserCreateForm
 # This is a little complex because we need to detect when we are
 # running in various configurations
 
-class RegisterView(View):
+class RegisterView(View): #poner esto en una app nueva que se llama authentications
     # Create your views here.
 
     def register(response):
         if response.method == "POST":
             form = UserCreateForm(response.POST)
             if form.is_valid():
+                print("entra")
                 form.save()
 
             return redirect("/")

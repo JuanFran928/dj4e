@@ -8,3 +8,4 @@ home/__pycache__/
 home/migrations/
 server/__pycache__/
 server/migrations/
+.env

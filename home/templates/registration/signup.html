@@ -10,8 +10,25 @@
 <form method="post" action="{% url 'register' %}">
 {% csrf_token %}
 <br><br> <!--Mejorar esto-->
-{{ form.as_p }}
+<div class="col-lg-8 col-sm-6 justify-content-center align-items-center d-flex flex-column border border-success m-auto p-2 align-middle">
+  <h2>Sign up </h2>
+<!--solo mostrar los mensajes si hay errores en el formulario https://stackoverflow.com/questions/39571245/django-forms-error-message-display-all-the-time-not-only-after-errors-->
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+
+
 <input type="submit" class="btn btn-primary" value="Register" />
 <input type="hidden" name="next" value="{{ next }}" />
+</div>
 </form>
 {% endblock %}
