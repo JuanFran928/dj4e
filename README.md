@@ -1,4 +1,6 @@
-Ads project developed in Django, inspired by dj4e.com course from Charles Severance.
+Ads project developed in Django, started in the dj4e.com course from Charles Severance.
+I'm adding some new features.
+
 This project is still under construction.
 
 In order to run the project in your browser:
@@ -13,4 +15,6 @@ In order to run the project in your browser:
 8) ```python manage.py migrate```
 9) ```python manage.py runserver 8080```
 10) copy and paste in the browser: http://127.0.0.1:8080/
+
+![image](https://user-images.githubusercontent.com/38920780/153203903-d2e33c0b-e7ac-4a87-a1f7-b3a1ee7ee30c.png)
 
