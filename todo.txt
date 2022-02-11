@@ -1,0 +1,14 @@
+Todo
+##Añadir captura de imagen al readme
+#añadir login a la pagina
+#desplegarlo en heroku
+#preparar una demo con un gif
+#añadirle carrito de la compra
+#cambiar foto en el portfolio
+#añadirle mas features al project
+#mejorar el login con github
+#sacarle fotos al antes y al despues, como vino el proyecto y como lo modifiqué
+#añadirle variable de entorno con la secret del github (
+    https://djangocentral.com/environment-variables-in-django/
+    https://alicecampkin.medium.com/how-to-set-up-environment-variables-in-django-f3c4db78c55f
+)

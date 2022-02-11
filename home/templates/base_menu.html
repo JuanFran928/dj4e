@@ -57,7 +57,7 @@ nav {
                 </li>
                 {% else %}
                 <li>
-                    <a href="#">Sign Up</a>
+                    <a href="{% url 'register' %}?next={% url 'ads:all' %}">Sign Up</a>
                 </li>
                 <li>
                 <a href="{% url 'login' %}?next={% url 'ads:all' %}">Login</a>

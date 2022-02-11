@@ -26,7 +26,10 @@
 
 # Then copy the client_key and secret to this file
 
-SOCIAL_AUTH_GITHUB_KEY = '_____' #Ask key
-SOCIAL_AUTH_GITHUB_SECRET = '____' #Ask key
+SOCIAL_AUTH_GITHUB_KEY = '83f0e8d22e5b763931fa'
+SOCIAL_AUTH_GITHUB_SECRET = 'a38e8f932cc69f366a322a183261866aa2987382'
+
+# Ask for the user's email (don't edit this line)
+SOCIAL_AUTH_GITHUB_SCOPE = ['user:email']
 
 # For detail: https://readthedocs.org/projects/python-social-auth/downloads/pdf/latest/
