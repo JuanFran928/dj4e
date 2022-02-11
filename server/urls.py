@@ -7,6 +7,7 @@ from django.conf import settings
 from django.conf.urls import url
 from django.conf.urls.static import static
 from django.views.static import serve
+from . import views
 
 urlpatterns = [
     #path('', TemplateView.as_view(template_name='home/main.html')),
@@ -15,6 +16,9 @@ urlpatterns = [
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # Keep
     path('', include('ads.urls')),                   # Add,
     path('home/', include('home.urls')),                   # Add,
+
+    #register
+    url(r'^accounts/register/$', views.RegisterView.register , name="register")
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

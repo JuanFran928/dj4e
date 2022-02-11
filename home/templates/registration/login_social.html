@@ -3,32 +3,37 @@
 {% block content %}
 
 {% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
+<p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
 {% if next %}
-  {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-  {% else %}
-    <p>Please login to see this site.</p>
-  {% endif %}
+{% if user.is_authenticated %}
+<p>Your account doesn't have access to this page. To proceed,
+  please login with an account that has access.</p>
+{% endif %}
 {% endif %}
 
 {% load crispy_forms_tags %}
-
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
-{{ form|crispy }}
-<input type="submit" class="btn btn-primary" value="Login Locally" />
-<input type="hidden" name="next" value="{{ next }}" />
-</form>
+<br><br>
+<div class="container">
+  <div class="col-lg-4 col-sm-6 justify-content-center align-items-center d-flex flex-column border border-success m-auto p-2 align-middle" style="height:400px;">
+    <h3>Login</h3>
+  <form method="post" action="{% url 'login' %}" >
+    {% csrf_token %}
+    {{ form|crispy }}
+    <div class="text-center">
+      <input type="submit" class="btn btn-primary" value="Login Locally" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </div>
+  </form>
+</div>
+</div>
 
 {% if settings.SOCIAL_AUTH_GITHUB_KEY %}
-<hr/>
+<hr />
 <a class="btn btn-info" role="button" href="{% url 'social:begin' 'github' %}?next={{ next }}">
-    <i class="fa fa-github" aria-hidden="true"></i>
-    Login with GitHub</a>
+  <i class="fa fa-github" aria-hidden="true"></i>
+  Login with GitHub</a>
 {% endif %}
 
 <!-- ROOT_URLCONF {{ settings.ROOT_URLCONF }} -->

@@ -8,7 +8,7 @@ from django.conf import settings
 # running in various configurations
 
 
-class HomeView(View):
+class HomeView(View): #mirar si me puedo deshacer de este homeview o del de mysite
     def get(self, request):
         print(request.get_host())
         host = request.get_host()
