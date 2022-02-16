@@ -18,11 +18,15 @@ In order to run the project in your browser:
 
 ![image](https://user-images.githubusercontent.com/38920780/153203903-d2e33c0b-e7ac-4a87-a1f7-b3a1ee7ee30c.png)
 
-DEMO
+# DEMO
 
-REGITER - LOGIN
+## REGITER - LOGIN
 
 ![register-login](https://user-images.githubusercontent.com/38920780/154322912-05c3def5-1785-4239-9fc8-a824f8781fcc.gif)
+
+## ADDING AN AD
+
+![add-ad](https://user-images.githubusercontent.com/38920780/154325363-23a44daa-2f57-4440-acbb-989097147e4d.gif)
 
 
 
