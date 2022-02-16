@@ -1,4 +1,4 @@
-#SETTING UP
+# SETTING UP
 
 Ads project developed in Django, started in the dj4e.com course from Charles Severance.
 I'm adding some new features.
@@ -18,7 +18,7 @@ In order to run the project in your browser:
 9) ```python manage.py runserver 8080```
 10) copy and paste in the browser: http://127.0.0.1:8080/
 
-#DATABASE
+# DATABASE
 
 # DEMO
 
