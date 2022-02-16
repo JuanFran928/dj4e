@@ -1,34 +1,30 @@
 {% extends "base_menu.html" %}
+{% load crispy_forms_tags %}
 
 
 {% block content %}
 
 {% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
+<p>Your username and password didn't match. Please try again.</p>
 {% endif %}
+<br><br>
 
-<form method="post" action="{% url 'register' %}">
-{% csrf_token %}
-<br><br> <!--Mejorar esto-->
-<div class="col-lg-8 col-sm-6 justify-content-center align-items-center d-flex flex-column border border-success m-auto p-2 align-middle">
-  <h2>Sign up </h2>
-<!--solo mostrar los mensajes si hay errores en el formulario https://stackoverflow.com/questions/39571245/django-forms-error-message-display-all-the-time-not-only-after-errors-->
-    {% for field in form %}
-      <p>
-        {{ field.label_tag }}<br>
-        {{ field }}
-        {% if field.help_text %}
-          <small style="color: grey">{{ field.help_text }}</small>
-        {% endif %}
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      </p>
-    {% endfor %}
+  <div
+    class="col-lg-6 col-sm-6 justify-content-center align-items-center d-flex flex-column border border-success ml-auto mr-auto mb-5 p-5 align-middle">
+    <form method="post" action="">
+      {% csrf_token %}
+      <!--Mejorar esto-->
 
+      <h2 class="text-center">Sign up </h2>
+      <!--solo mostrar los mensajes si hay errores en el formulario https://stackoverflow.com/questions/39571245/django-forms-error-message-display-all-the-time-not-only-after-errors-->
 
-<input type="submit" class="btn btn-primary" value="Register" />
-<input type="hidden" name="next" value="{{ next }}" />
-</div>
-</form>
+      {{form|crispy}}
+
+      <div class="text-center">
+        <input type="submit" class="btn btn-primary" value="Register" />
+        <input type="hidden" name="next" value="{{ next }}" />
+      </div>
+    </form>
+  </div>
+
 {% endblock %}

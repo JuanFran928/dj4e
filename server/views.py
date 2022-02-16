@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.conf import settings
 from .forms import UserCreateForm
+
 # Create your views here.
 
 # This is a little complex because we need to detect when we are
@@ -14,11 +15,10 @@ class RegisterView(View): #poner esto en una app nueva que se llama authenticati
         if response.method == "POST":
             form = UserCreateForm(response.POST)
             if form.is_valid():
-                print("entra")
+                print("register vieew")
                 form.save()
-
-            return redirect("/")
+            #return redirect("/")
         else:
             form = UserCreateForm()
 
-        return render(response, "registration/signup.html", {"form": form})
+        return render(response, "registration/signup.html", {"form": form}) #el email se pierde en el redirect

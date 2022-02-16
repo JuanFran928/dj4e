@@ -1,8 +1,4 @@
 from django.db import models
-
-
-# Create your models here.
-from django.db import models
 from django.core.validators import MinLengthValidator
 from django.conf import settings
 
@@ -19,8 +15,6 @@ class Ad(models.Model) :
         through='Comment', related_name='comments_owned')
     created_at = models.DateTimeField(auto_now_add=True, null= True)
     updated_at = models.DateTimeField(auto_now=True, null= True)
-    #Picture
-    #picture = models.BinaryField(null=True, editable=True)
     picture = models.ImageField(upload_to='anuncios', null = True, blank = True, default = "anuncios/image.jpg") #carpeta donde se sube
 
 
