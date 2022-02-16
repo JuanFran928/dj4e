@@ -1,3 +1,5 @@
+# SETTING UP
+
 Ads project developed in Django, started in the dj4e.com course from Charles Severance.
 I'm adding some new features.
 
@@ -16,5 +18,20 @@ In order to run the project in your browser:
 9) ```python manage.py runserver 8080```
 10) copy and paste in the browser: http://127.0.0.1:8080/
 
-![image](https://user-images.githubusercontent.com/38920780/153203903-d2e33c0b-e7ac-4a87-a1f7-b3a1ee7ee30c.png)
+# DATABASE
+
+# DEMO
+
+## REGITER - LOGIN
+
+![register-login](https://user-images.githubusercontent.com/38920780/154322912-05c3def5-1785-4239-9fc8-a824f8781fcc.gif)
+
+## ADDING AN AD
+
+![add-ad](https://user-images.githubusercontent.com/38920780/154325363-23a44daa-2f57-4440-acbb-989097147e4d.gif)
+
+## OVERALL LOOK
+
+![overall-view](https://user-images.githubusercontent.com/38920780/154327828-7c505e1f-7837-47d6-9ac3-51fbf70253db.gif)
+
 
