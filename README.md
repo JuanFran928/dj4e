@@ -20,6 +20,9 @@ In order to run the project in your browser:
 
 DEMO
 
-REGITER
-![register](https://user-images.githubusercontent.com/38920780/154321254-caa5b5b5-506b-444c-a680-d08e8b558e8c.gif)
+REGITER - LOGIN
+
+![register-login](https://user-images.githubusercontent.com/38920780/154322912-05c3def5-1785-4239-9fc8-a824f8781fcc.gif)
+
+
 
