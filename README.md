@@ -18,3 +18,8 @@ In order to run the project in your browser:
 
 ![image](https://user-images.githubusercontent.com/38920780/153203903-d2e33c0b-e7ac-4a87-a1f7-b3a1ee7ee30c.png)
 
+DEMO
+
+REGITER
+![register](https://user-images.githubusercontent.com/38920780/154321254-caa5b5b5-506b-444c-a680-d08e8b558e8c.gif)
+
