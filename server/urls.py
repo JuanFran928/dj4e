@@ -7,18 +7,12 @@ from django.conf import settings
 from django.conf.urls import url
 from django.conf.urls.static import static
 from django.views.static import serve
-from . import views
 
 urlpatterns = [
-    #path('', TemplateView.as_view(template_name='home/main.html')),
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),  # Add
-    url(r'^oauth/', include('social_django.urls', namespace='social')),  # Keep
     path('', include('ads.urls')),                   # Add,
     path('home/', include('home.urls')),                   # Add,
-
-    #register
-    url(r'^accounts/register/$', views.RegisterView.register , name="register")
+    path('auth/', include('authentication.urls')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
@@ -42,13 +36,4 @@ urlpatterns += [
     ),
 ]
 
-# Switch to social login if it is configured - Keep for later. Para el login con github
-try:
-    from . import github_settings
-    social_login = 'registration/login_social.html'
-    urlpatterns.insert(0,
-        path('accounts/login/', auth_views.LoginView.as_view(template_name=social_login))
-    )
-    print('Using',social_login,'as the login template')
-except:
-    print('Using registration/login.html as the login template')
+

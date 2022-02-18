@@ -10,3 +10,5 @@ server/__pycache__/
 server/migrations/
 server/.env
 todo.txt
+db.sqlite3
+media/

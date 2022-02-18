@@ -29,7 +29,7 @@
 </div>
 </div>
 
-{% if settings.SOCIAL_AUTH_GITHUB_KEY %}
+{% if settings.SOCIAL_AUTH_GITHUB_KEY %} 
 <hr />
 <a class="btn btn-info" role="button" href="{% url 'social:begin' 'github' %}?next={{ next }}">
   <i class="fa fa-github" aria-hidden="true"></i>
