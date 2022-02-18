@@ -8,7 +8,7 @@ home/__pycache__/
 home/migrations/
 server/__pycache__/
 server/migrations/
-server/.env
+server/settings/.env
 todo.txt
 db.sqlite3
 media/
