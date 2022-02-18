@@ -1,6 +1,7 @@
 # GENERAL INFORMATION
 
 Ads project developed in Django, Webplace to post ads and comments on them. Used technologies: Django, PostgreSQL, Bootstrap.
+
 Started in the dj4e.com course from Charles Severance. 
 I'm adding some new features in order to practice and learn.
 
