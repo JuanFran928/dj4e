@@ -1,7 +1,10 @@
-# SETTING UP
+# GENERAL INFORMATION
 
-Ads project developed in Django, started in the dj4e.com course from Charles Severance.
-I'm adding some new features.
+Ads project developed in Django, Webplace to post ads and comments on them. Used technologies: Django, PostgreSQL, Bootstrap.
+Started in the dj4e.com course from Charles Severance. 
+I'm adding some new features in order to practice and learn.
+
+# SETTING UP
 
 This project is still under construction.
 
